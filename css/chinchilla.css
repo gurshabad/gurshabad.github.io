@@ -11,7 +11,9 @@ body {
 
 #one {
 	text-align: center;
+	height: 100vh;
 	color: #fff;
-	font-size: 13em;
-	margin-top: 0.5em;
+	padding: 10px;
+	font-size: 20vh;
+	margin-top: 25vh;
 }
