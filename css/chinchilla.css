@@ -1,0 +1,17 @@
+body {
+	overflow: hidden;
+	margin: 0px;
+	background: url('../img/rainpanda2.jpg') no-repeat center center fixed;
+	-webkit-background-size: cover;
+	-moz-background-size: cover;
+	-o-background-size: cover;
+	sbackground-size: cover;
+	font-family: 'Lato';
+}
+
+#one {
+	text-align: center;
+	color: #fff;
+	font-size: 13em;
+	margin-top: 0.5em;
+}
