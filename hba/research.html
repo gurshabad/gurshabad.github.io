@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <link rel="shortcut icon" href="../../docs-assets/ico/favicon.png">
+
+    <title>H. B. Acharya - Research</title>
+
+    <!-- Bootstrap core CSS -->
+    <link href="assets/css/bootstrap.css" rel="stylesheet">
+
+
+    <!-- Custom styles for this template -->
+    <link href="assets/css/main.css" rel="stylesheet">
+
+    <script src="https://code.jquery.com/jquery-1.10.2.min.js"></script>
+    <script src="assets/js/hover.zoom.js"></script>
+    <script src="assets/js/hover.zoom.conf.js"></script>
+
+    <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+      <script src="https://oss.maxcdn.com/libs/respond.js/1.3.0/respond.min.js"></script>
+    <![endif]-->
+  </head>
+
+  <body>
+
+    <!-- Static navbar -->
+    <div class="navbar navbar-inverse navbar-static-top">
+      <div class="container">
+        <div class="navbar-header">
+          <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+          <a class="navbar-brand" href="index.html">H. B. Acharya</a>
+        </div>
+        <div class="navbar-collapse collapse">
+          <ul class="nav navbar-nav navbar-right">
+            <li><a href="research.html">Research</a></li>
+            <li><a href="teaching.html">Teaching</a></li>
+            <li><a href="personal.html">Personal</a></li>
+          </ul>
+        </div><!--/.nav-collapse -->
+      </div>
+    </div>
+	
+	
+	<!-- +++++ Projects Section +++++ -->
+	
+	<div class="container pt">
+		<div class="row mt">
+			<div class="col-lg-6 col-lg-offset-3 centered">
+				<h3>RESEARCH</h3>
+				<hr>
+				<p>My area of research is the security and performance of computer networks. I am interested both in the design, implementation and maintenance of practical networks, and in algorithms and protocols. </p>
+			</div>
+		</div>
+		<div class="row mt">	
+			<div class="col-lg-8 col-lg-offset-2">
+				<h4>Summary</h4>
+				<p>Networks are large distributed systems, and are also subject to a wide variety of attacks (eavesdropping, Man-in-the-Middle, Denial of Service, confused deputy attacks such as phishing, and so on). In order to ensure networks that are secure and available, but at the same time scalable and high-performance, it is essential to see them both at a high level of abstraction (such as a graph with edges representing FIFO channels) and as physical machines with physical components (for example, routers have finite buffers, often do not respond to ping, and so on). My work mostly focuses on the detection and diagnosis of faults in networks, and I have also worked in the design of secure protocols. </p>
+			</div>
+			<div class="col-lg-8 col-lg-offset-2">
+				<h4>Monitoring and Debugging Networks</h4>
+				<p>My primary area of research is finding network failures, and diagnosing the fault responsible. Failures can be caused by faults in the policy (i.e. incorrect contents in routing tables or filtering tables such as firewalls) or the mechanism (link failure etc.) My early work focuses on finding errors in network policies: for my dissertation, I designed, proved correct, and built <a href="">Probe</a>, a new policy verification algorithm. In contrast to the existing decision-diagram methods, Probe requires only O(nd) space to verify a policy with n rules and d features; though it requires O(n^d) time, in practice it runs in seconds for policies of several thousand rules. (This performance is made possible by the use of two new techniques, projection and slicing.) I also showed how a fast verification algorithm (in this case, Probe) could be used for other purposes, such as finding and removing all redundant rules in a policy. </p>
+				<p>In my later work on policies, I have explored parallelism, building both a parallel version of Probe and a method for reducing a policy into independent modules that can be run in parallel. A particularly interesting result from this work was my discovery of new metrics for policy complexity; I believe one of these metrics, the <a href="">width index</a>, explains the question of why decision-diagram methods are tractable in practice, when in theory they should take O(nd) space. </p>
+				<p>In my current work, I am focusing on more general policies, such as distributed and stateful policies, and on tools that can help detect errors in both policy and mechanism, such as Nick McKeown's Hassel and Ari Fogel's Batfish. I am exploring the possibility of using SAT solvers to check the correctness of a network, whether they are competitive with BDD based approaches, and how they can supplement pre-existing tools. Further, I am interested in the problem of debugging networks by identifying the fault responsible for a network failure; I intend to explore various approaches, ranging from model checking to delta debugging, to diagnose faults in networks. </p>
+				<p>Closely related to my work on network diagnostics, I have also made some contributions to the problem of <a href="">network tomography</a>, i.e. reconstructing a network, given a set of paths through it. If any nodes in the network have more than one possible name (i.e. they are anonymous or aliased), then the network topology cannot always be uniquely deduced; besides the first proof of this statement, I showed that the correct topology can be identified uniquely only in the case of some simple topologies such as trees and odd rings. (In other cases, such as even rings, there are many - sometimes exponentially many - possible networks that produce the same set of paths.) These results are especially important for networks that care about anonymity (such as P2P networks), but I am myself more interested in the possibility of developing tools to map networks with less error. </p>
+			</div>
+			<div class="col-lg-8 col-lg-offset-2">
+				<h4>Network Protocols</h4>
+				<p>A secondary area in which I have some interest is the modeling and implementation of secure network protocols. A large number of security problems are caused by the fact that practical protocols are quite complicated, and subtle errors are very difficult to reason out. In this area, I have contributed theoretical results on adversary models and key distribution, and developed, implemented, and showed the security of several protocols. For example, I am one of the developers of the Two-Way Password Protocol, which ensures secure two-way authentication between server and client. (In contrast, the current state-of-the-art, where the server provides a sitekey and the client provides a password, can be broken by a Man-in-the-Middle attack: in any such protocol, either client or server has to be the first to provide credentials - whether password or sitekey - and a clever attacker can use this asymmetry to compromise the system). I am particularly interested in machine-to-machine networks, and am currently studying the security of such networks in the context of my background in sensor networks, proxies, and network operating systems. </p>
+			</div>
+		</div><!-- /row -->
+	</div><!-- /container -->
+	
+	
+	<!-- +++++ Footer Section +++++ -->
+	
+	<div id="footer">
+		<div class="container">
+			<div class="row">
+				<div class="col-lg-4">
+					<h4>My Bunker</h4>
+					<p>
+						Some Address 987,<br/>
+						+34 9054 5455, <br/>
+						Madrid, Spain.
+					</p>
+				</div><!-- /col-lg-4 -->
+				
+				<div class="col-lg-4">
+					<h4>My Links</h4>
+					<p>
+						<a href="#">Dribbble</a><br/>
+						<a href="#">Twitter</a><br/>
+						<a href="#">Facebook</a>
+					</p>
+				</div><!-- /col-lg-4 -->
+				
+				<div class="col-lg-4">
+					<h4>About Stanley</h4>
+					<p>This cute theme was created to showcase your work in a simple way. Use it wisely.</p>
+				</div><!-- /col-lg-4 -->
+			
+			</div>
+		
+		</div>
+	</div>
+	
+
+    <!-- Bootstrap core JavaScript
+    ================================================== -->
+    <!-- Placed at the end of the document so the pages load faster -->
+    <script src="assets/js/bootstrap.min.js"></script>
+  </body>
+</html>
