@@ -1,19 +1,43 @@
 body {
 	overflow: hidden;
 	margin: 0px;
-	background: url('../img/rainpanda2.jpg') no-repeat center center fixed;
+	background: #FFF8E7 no-repeat center center fixed;
 	-webkit-background-size: cover;
 	-moz-background-size: cover;
 	-o-background-size: cover;
-	sbackground-size: cover;
-	font-family: 'Lato';
+	background-size: cover;
+	font-family: 'Lato', 'Sans Serif';
 }
 
 #one {
 	text-align: center;
-	height: 100vh;
-	color: #fff;
+	color: #000;
 	padding: 10px;
-	font-size: 25vh;
-	margin-top: 25vh;
+	font-size: 40px;
+	margin-top: 20vh;
+}
+
+#two {
+	text-align: center;
+	color: #000;
+	font-size: 24px;
+	padding: 10px;
+}
+
+#three {
+	text-align: center;
+	color: #000;
+	padding: 10px;
+	font-size: 17px;
+}
+
+#four {
+	text-align: center;
+	color: #000;
+	padding-top: 40vh;
+	font-size: 14px;
+}
+
+a {
+	color: #000;
 }
