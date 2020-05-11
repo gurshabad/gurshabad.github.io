@@ -688,3 +688,12 @@ cite::before {
   color: #111;
   font-size: 11px;
 }
+
+.topnav {
+  margin-top: 40px;
+}
+
+.topnav a {
+  text-align: center;
+  padding-right: 14px;
+}
