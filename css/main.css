@@ -475,17 +475,14 @@ code {
 /*****************************************************************************/
 
 .about {
-  padding-left: 140px;
+  text-align: center;
   margin-top: 2em;
-  height: 120px;
   position: relative;
 }
 
 .about img {
-  position: absolute;
-  left: 0px;
-  top: 0px;
   border-radius: 60px;
+  margin-bottom: 0.5em; 
 }
 
 .posts {
@@ -690,10 +687,7 @@ cite::before {
 }
 
 .topnav {
-  margin-top: 40px;
-}
-
-.topnav a {
+  margin-top: 30px;
   text-align: center;
-  padding-right: 14px;
+
 }
